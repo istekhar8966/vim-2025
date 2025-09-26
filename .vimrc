@@ -27,6 +27,11 @@ Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
+
+" Highlight yanked text
+au TextYankPost * silent! lua vim.highlight.on_yank {timeout=200}
+
+
 "==============================================================================
 " Basic Settings
 "==============================================================================
